@@ -1,0 +1,11 @@
+name = "bankin-scorecard"
+compatibility_date = "2024-12-01"
+
+[pages]
+build_command = "npm run build"
+build_output_dir = "dist"
+
+[[redirects]]
+from = "/about"
+to = "/about/index.html"
+status = 200

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — .bank.in Security Scorecard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>body{{font-family:system-ui,sans-serif}}</style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+<nav class="border-b border-zinc-800 px-6 py-4 flex items-center gap-4">
+  <h1 class="text-lg font-bold">🔒 .bank.in Security Scorecard</h1>
+  <span class="text-sm text-zinc-500">by CashlessConsumer</span>
+  <a href="/about" class="ml-auto text-sm text-amber-500 hover:text-amber-400">About & Rubric</a>
+</nav>
+<main class="max-w-3xl mx-auto px-6 py-12 text-sm leading-relaxed text-zinc-300">
+<h2 class="text-2xl font-bold text-white mb-6">About This Project</h2>
+<p class="mb-4">In April 2025, the RBI mandated all Indian banks to migrate to .bank.in domains by October 31, 2025, to reduce phishing and spoofing. The registry is operated by IDRBT.</p>
+<p class="mb-4">This scorecard provides an independent, automated security rating for every registered .bank.in domain. It is built and maintained by <strong class="text-amber-400">CashlessConsumer</strong> as a public transparency initiative.</p>
+<p class="mb-6 text-zinc-500">Data is refreshed daily via automated scans. Last scan: .</p>
+
+<h3 class="text-lg font-bold text-white mb-4">Scoring Rubric (0-100)</h3>
+<div class="space-y-3 mb-6">
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">HTTPS/TLS (15 pts)</span><br><span class="text-zinc-400">10 for HTTPS, +5 for TLS 1.3, +3 for TLS 1.2</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">HSTS (10 pts)</span><br><span class="text-zinc-400">7 for HSTS header, +3 for preload</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Security Headers (15 pts)</span><br><span class="text-zinc-400">5 each for X-Frame-Options, X-Content-Type-Options: nosniff, CSP</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Email Security (20 pts)</span><br><span class="text-zinc-400">12 for DMARC reject, 8 for quarantine, 4 for any DMARC. +4 for SPF, +4 for MX</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">DNSSEC (10 pts)</span><br><span class="text-zinc-400">10 if DNSKEY record present</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">No Bad Exposures (20 pts)</span><br><span class="text-zinc-400">5 each: no .git leak, no .env leak, no phpinfo, no cPanel on standard ports</span></div>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Site Reachable (10 pts)</span><br><span class="text-zinc-400">5 if returns 200/301/302, +5 if not timeouting</span></div>
+</div>
+
+<h3 class="text-lg font-bold text-white mb-4">Grade Boundaries</h3>
+<div class="bg-zinc-900 rounded p-3 border border-zinc-800 space-y-1 text-sm mb-6">
+<div><span class="inline-block w-20 font-bold text-emerald-400">A ≥ 80</span> <span class="text-zinc-400">Excellent</span></div>
+<div><span class="inline-block w-20 font-bold text-blue-400">B ≥ 60</span> <span class="text-zinc-400">Good</span></div>
+<div><span class="inline-block w-20 font-bold text-amber-400">C ≥ 40</span> <span class="text-zinc-400">Average</span></div>
+<div><span class="inline-block w-20 font-bold text-orange-400">D ≥ 20</span> <span class="text-zinc-400">Poor</span></div>
+<div><span class="inline-block w-20 font-bold text-red-400">F &lt; 20</span> <span class="text-zinc-400">Critical</span></div>
+</div>
+
+<p class="text-zinc-500">Source code on GitHub: <a href="https://github.com/CCAgentOrg/bankin-scorecard" class="text-amber-500 hover:text-amber-400">CCAgentOrg/bankin-scorecard</a></p>
+</main>
+</body>
+</html>
