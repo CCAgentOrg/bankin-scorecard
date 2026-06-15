@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+*.duckdb
+*.duckdb.wal
+data/scan.log
+data/domains.txt
+node_modules
