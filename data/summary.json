@@ -1,1 +1,1 @@
-[{"total": 1497, "avg_score": 41.5, "with_https": 1062.0, "with_hsts": 384.0, "with_dnssec": 209.0, "dmarc_reject": 0.0, "git_exposed": 471.0, "env_exposed": 376.0, "cpanel": 612.0, "admin_panels": 500.0, "last_scan": "2026-06-15T05:40:47.231630"}]
+[{"total":1497,"avg_score":41.5,"with_https":1062.0,"with_hsts":384.0,"with_dnssec":209.0,"dmarc_reject":0.0,"dmarc_quarantine":0.0,"git_exposed":471.0,"env_exposed":376.0,"cpanel":612.0,"admin_panels":500.0,"unreachable":435.0,"last_scan":"2026-06-15 05:40:47.23163"}]

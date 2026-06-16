@@ -49,3 +49,30 @@ Runs daily at 8:30 AM IST via Zo automation:
 - **C** (40-59): Fair — several gaps
 - **D** (20-39): Poor — critical gaps
 - **F** (0-19): Failing — fundamentally insecure
+
+## Per-Domain Detail Pages
+
+Each .bank.in domain now has its own page with evidence-based score breakdown.
+
+### zo.space Dynamic Route
+- **Route**: `/bankin-scorecard/domain/:slug` (public, dynamic)
+- Fetches from API endpoint `q=domain&domain=xxx`
+- Shows 7-category evidence breakdown with earned/max points, progress bars, and pass/fail indicators
+- Raw scan data collapsible section for transparency
+- Back-link to main dashboard
+- Link: https://cashlessconsumer.zo.space/bankin-scorecard/domain/{domain}
+
+### Static Pages (Cloudflare Pages)
+- **Generator**: `scanner/gen_domain_pages.py`
+- **Output**: `site/domains/{domain}.html` for all 1,497 domains
+- Linked from the main dashboard table (JS-rendered with `<a>` links)
+- API route `/api/bankin-scorecard` supports `q=domain` for single-domain lookups
+
+### API
+- `/api/bankin-scorecard?q=domain&domain=xxx` — returns full evidence fields for one domain
+- `/api/bankin-scorecard?q=domains` — paginated list (default 100/page)
+- `/api/bankin-scorecard?q=summary` — aggregate stats
+- `/api/bankin-scorecard?q=grades` — grade distribution
+
+### Fix
+- `export_json.py` no longer filters by single timestamp — all 1,497 domains export correctly with full evidence fields (tls_version, hsts_preload, x_frame_options, x_content_type, content_security, spf_record, has_mx, ip_address, cloud_provider, page_title, server_header)

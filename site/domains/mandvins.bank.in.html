@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>mandvins.bank.in — .bank.in Security Scorecard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{font-family:system-ui,sans-serif;background:#0a0a0f;color:#e8e6e3;min-height:100vh}
+.cat-card{background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px}
+.cat-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cat-hdr h3{font-size:14px;font-weight:600;color:#e8e6e3}
+.cat-score{font-size:13px;font-family:monospace;color:#22c55e}
+.cat-bar{width:100%;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:12px}
+.cat-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.ev-list{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#89847a}
+.ev-item{display:flex;align-items:center;gap:8px}
+.ev-icon{font-weight:bold;width:16px;text-align:center}
+.ev-icon:has(:nth-child(1):first-letter) { }
+.ev-pts{margin-left:auto;font-family:monospace;font-size:11px;opacity:0.7}
+.grade-badge{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;border:2px solid}
+</style>
+</head>
+<body>
+<nav class="border-b border-zinc-800 px-6 py-4 flex items-center gap-4">
+  <h1 class="text-lg font-bold">🔒 .bank.in Security Scorecard</h1>
+  <span class="text-sm text-zinc-500">by CashlessConsumer</span>
+  <a href="../" class="ml-auto text-sm text-emerald-500 hover:text-emerald-400">&larr; Dashboard</a>
+  <a href="../about.html" class="text-sm text-zinc-500 hover:text-zinc-400">About</a>
+</nav>
+<main class="max-w-4xl mx-auto px-4 py-8">
+  <div class="flex items-start gap-4 mb-8">
+    <div class="grade-badge" style="background:#22c55e22;color:#22c55e;border-color:#22c55e44">A</div>
+    <div>
+      <h2 class="text-2xl font-bold">mandvins.bank.in</h2>
+      <p class="text-zinc-400 text-lg">THE MANDVI NAGRIK SAHKARIBANK LTD</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">O-UCB</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#22c55e">Score: 84/100</span>
+      </div>
+    </div>
+  </div>
+  <h3 class="text-lg font-semibold mb-4" style="color:#f0b429">Evidence Breakdown</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>HTTPS / TLS</h3><span class="cat-score">15/15</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>HTTPS enabled</span><span class="ev-pts">10</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>TLSv1.3</span><span class="ev-pts">5</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>HSTS</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>Strict-Transport-Security header</span><span class="ev-pts">7</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Preload ready</span><span class="ev-pts">3</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>Security Headers</h3><span class="cat-score">15/15</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>X-Frame-Options: sameorigin</span><span class="ev-pts">5</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>X-Content-Type-Options: nosniff</span><span class="ev-pts">5</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Content-Security-Policy present</span><span class="ev-pts">5</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>Email Security</h3><span class="cat-score">4/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:20%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>DMARC: not set</span><span class="ev-pts">0</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>SPF record missing</span><span class="ev-pts">0</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>MX record present</span><span class="ev-pts">4</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>DNSSEC</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>DNSSEC (DNSKEY record)</span><span class="ev-pts">10</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:75%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="ev-pts">5</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="ev-pts">5</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="ev-pts">5</span></div></div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>Status 200</span><span class="ev-pts">5</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Non-error response</span><span class="ev-pts">5</span></div></div>
+        </div>
+  </div>
+  <details class="mb-8">
+    <summary class="text-sm font-semibold cursor-pointer" style="color:#f0b429">Raw Scan Data</summary>
+    <div class="mt-3 p-4 rounded-lg overflow-x-auto" style="background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08)">
+      <pre class="text-xs leading-relaxed font-mono text-zinc-500">{
+  &quot;domain&quot;: &quot;mandvins.bank.in&quot;,
+  &quot;bank_name&quot;: &quot;THE MANDVI NAGRIK SAHKARIBANK LTD&quot;,
+  &quot;bank_type&quot;: &quot;O-UCB&quot;,
+  &quot;dicgc_category&quot;: &quot;UCBs&quot;,
+  &quot;http_status&quot;: 200,
+  &quot;https&quot;: true,
+  &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
+  &quot;hsts&quot;: true,
+  &quot;hsts_preload&quot;: true,
+  &quot;x_frame_options&quot;: &quot;sameorigin&quot;,
+  &quot;x_content_type&quot;: &quot;nosniff&quot;,
+  &quot;content_security&quot;: true,
+  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;has_mx&quot;: true,
+  &quot;dnssec&quot;: true,
+  &quot;git_exposed&quot;: false,
+  &quot;env_exposed&quot;: false,
+  &quot;cpanel_detected&quot;: false,
+  &quot;admin_panel_detected&quot;: false,
+  &quot;server_header&quot;: &quot;nginx&quot;,
+  &quot;page_title&quot;: &quot;The Mandvi Nagrik Sahakari Bank Ltd.&quot;,
+  &quot;ip_address&quot;: &quot;13.233.207.229&quot;,
+  &quot;cloud_provider&quot;: &quot;Azure&quot;,
+  &quot;score&quot;: 84,
+  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:37:07.616971&quot;
+}</pre>
+    </div>
+  </details>
+  <div class="text-xs text-zinc-600 space-y-1">
+    <p>IP: 13.233.207.229 | Cloud: Azure</p>
+    <p>Title: The Mandvi Nagrik Sahakari Bank Ltd.</p>
+    <p>Last scanned: 2026-06-15 05:37:07.616971</p>
+  </div>
+  <div class="mt-8 text-center text-xs text-zinc-700 border-t border-zinc-800 pt-4">
+    Built by CashlessConsumer — independent OSINT-based security assessment.
+  </div>
+</main>
+</body>
+</html>
