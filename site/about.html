@@ -3,43 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — .bank.in Security Scorecard</title>
+<title>About & Rubric — .bank.in Security Scorecard</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<style>body{{font-family:system-ui,sans-serif}}</style>
+<style>
+body{font-family:system-ui,sans-serif;background:#09090b;color:#e8e6e3;min-height:100vh}
+nav{border-bottom:1px solid #27272a;padding:16px 24px;display:flex;align-items:center;gap:12px}
+nav h1{font-size:18px;font-weight:700}
+nav a{text-decoration:none;font-size:14px}
+.rubric-card{background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px}
+.rubric-card h3{font-weight:600;margin-bottom:8px;color:#e8e6e3}
+.rubric-card .pts{font-family:monospace;font-size:14px}
+.grade-row{display:flex;align-items:center;padding:8px 12px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.grade-row:last-child{border-bottom:none}
+.grade-letter{width:40px;font-weight:700;font-size:18px}
+.grade-range{width:100px;font-family:monospace;font-size:13px}
+.grade-desc{font-size:13px;color:#a1a1aa;flex:1}
+.lim-item{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:8px}
+.lim-item:last-child{border-bottom:none}
+.lim-item .lim-icon{flex-shrink:0;margin-top:2px;width:18px;text-align:center}
+</style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
-<nav class="border-b border-zinc-800 px-6 py-4 flex items-center gap-4">
-  <h1 class="text-lg font-bold">🔒 .bank.in Security Scorecard</h1>
-  <span class="text-sm text-zinc-500">by CashlessConsumer</span>
-  <a href="/about" class="ml-auto text-sm text-amber-500 hover:text-amber-400">About & Rubric</a>
+<body>
+<nav>
+  <span style="font-size:20px">🔒</span>
+  <h1>.bank.in Security Scorecard</h1>
+  <span style="font-size:13px;color:#71717a">by CashlessConsumer</span>
+  <div style="margin-left:auto;display:flex;gap:16px">
+    <a href="../" style="color:#22c55e">&larr; Dashboard</a>
+    <a href="../about.html" style="color:#f0b429;font-weight:600">About & Rubric</a>
+  </div>
 </nav>
-<main class="max-w-3xl mx-auto px-6 py-12 text-sm leading-relaxed text-zinc-300">
-<h2 class="text-2xl font-bold text-white mb-6">About This Project</h2>
-<p class="mb-4">In April 2025, the RBI mandated all Indian banks to migrate to .bank.in domains by October 31, 2025, to reduce phishing and spoofing. The registry is operated by IDRBT.</p>
-<p class="mb-4">This scorecard provides an independent, automated security rating for every registered .bank.in domain. It is built and maintained by <strong class="text-amber-400">CashlessConsumer</strong> as a public transparency initiative.</p>
-<p class="mb-6 text-zinc-500">Data is refreshed daily via automated scans. Last scan: .</p>
 
-<h3 class="text-lg font-bold text-white mb-4">Scoring Rubric (0-100)</h3>
-<div class="space-y-3 mb-6">
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">HTTPS/TLS (15 pts)</span><br><span class="text-zinc-400">10 for HTTPS, +5 for TLS 1.3, +3 for TLS 1.2</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">HSTS (10 pts)</span><br><span class="text-zinc-400">7 for HSTS header, +3 for preload</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Security Headers (15 pts)</span><br><span class="text-zinc-400">5 each for X-Frame-Options, X-Content-Type-Options: nosniff, CSP</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Email Security (20 pts)</span><br><span class="text-zinc-400">12 for DMARC reject, 8 for quarantine, 4 for any DMARC. +4 for SPF, +4 for MX</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">DNSSEC (10 pts)</span><br><span class="text-zinc-400">10 if DNSKEY record present</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">No Bad Exposures (20 pts)</span><br><span class="text-zinc-400">5 each: no .git leak, no .env leak, no phpinfo, no cPanel on standard ports</span></div>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800"><span class="font-bold text-emerald-400">Site Reachable (10 pts)</span><br><span class="text-zinc-400">5 if returns 200/301/302, +5 if not timeouting</span></div>
-</div>
+<main class="max-w-4xl mx-auto px-4 py-10" style="font-size:14px;line-height:1.7">
 
-<h3 class="text-lg font-bold text-white mb-4">Grade Boundaries</h3>
-<div class="bg-zinc-900 rounded p-3 border border-zinc-800 space-y-1 text-sm mb-6">
-<div><span class="inline-block w-20 font-bold text-emerald-400">A ≥ 80</span> <span class="text-zinc-400">Excellent</span></div>
-<div><span class="inline-block w-20 font-bold text-blue-400">B ≥ 60</span> <span class="text-zinc-400">Good</span></div>
-<div><span class="inline-block w-20 font-bold text-amber-400">C ≥ 40</span> <span class="text-zinc-400">Average</span></div>
-<div><span class="inline-block w-20 font-bold text-orange-400">D ≥ 20</span> <span class="text-zinc-400">Poor</span></div>
-<div><span class="inline-block w-20 font-bold text-red-400">F &lt; 20</span> <span class="text-zinc-400">Critical</span></div>
-</div>
+  <!-- Section 1: About This Project -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2" style="color:#e8e6e3">
+      <span style="color:#f0b429">◆</span> About This Project
+    </h2>
+    <div class="space-y-3" style="color:#a1a1aa">
+      <p><strong style="color:#e8e6e3">What is .bank.in?</strong> In April 2025, the Reserve Bank of India (RBI) mandated that all Indian banks migrate to <code style="color:#f0b429;background:rgba(240,180,41,0.1);padding:1px 6px;border-radius:4px;font-size:13px">.bank.in</code> domains by October 31, 2025, to reduce phishing and spoofing attacks. The registry is operated by the Institute for Development and Research in Banking Technology (IDRBT), with the technical portal built by IKCON Technologies.</p>
+      <p><strong style="color:#e8e6e3">Who runs this?</strong> This scorecard is an independent project by <strong style="color:#f0b429">CashlessConsumer</strong>. It has no affiliation with IDRBT, RBI, NIXI, or any government agency. It is a public transparency initiative — because the regulator does not publish security benchmarks for its own TLD.</p>
+      <p><strong style="color:#e8e6e3">Data sources:</strong></p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li><strong>IDRBT portal billing endpoint</strong> — 1,535 invoices extracted, yielding 1,497 unique registered .bank.in domains</li>
+        <li><strong>crt.sh Certificate Transparency logs</strong> — 6,543 certificate entries triangulated against the domain list</li>
+        <li><strong>IFSC codes &amp; DICGC deposit insurance data</strong> — used to cross-reference bank names, types, and categories</li>
+      </ul>
+      <p class="mt-4 text-sm italic" style="color:#f0b429;border-left:3px solid #f0b429;padding-left:12px">
+        <strong>Methodology note:</strong> Automated OSINT scans from a single vantage point. Results are based on externally observable signals and may differ from a bank's internal security posture. A passing score does not guarantee security — a failing score is a strong indicator of risk.
+      </p>
+      <p class="text-sm" style="color:#52525b">
+        <strong>Last scan:</strong> 2026-06-16 11:02 IST
+        <span style="margin-left:12px">·</span>
+        <span style="margin-left:12px"><strong>Domains assessed:</strong> 1,497</span>
+        <span style="margin-left:12px">·</span>
+        <span style="margin-left:12px"><strong>Average score:</strong> 48.9/100</span>
+      </p>
+    </div>
+  </section>
 
-<p class="text-zinc-500">Source code on GitHub: <a href="https://github.com/CCAgentOrg/bankin-scorecard" class="text-amber-500 hover:text-amber-400">CCAgentOrg/bankin-scorecard</a></p>
+  <!-- Section 2: Scoring Rubric -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2" style="color:#e8e6e3">
+      <span style="color:#22c55e">◆</span> Scoring Rubric
+      <span style="font-size:13px;color:#52525b;font-weight:400">— 7 categories, 100 points total</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#22c55e">🔒</span> HTTPS / TLS</h3>
+          <span class="pts" style="color:#f0b429">15 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">10 pts</strong> — Port 443 responds with valid HTTPS<br>
+          <strong style="color:#a1a1aa">+5 pts</strong> — TLSv1.3 supported<br>
+          <strong style="color:#a1a1aa">+3 pts</strong> — TLSv1.2 supported (if 1.3 not available)
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#3b82f6">🛡️</span> HSTS</h3>
+          <span class="pts" style="color:#f0b429">10 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">7 pts</strong> — Strict-Transport-Security header present<br>
+          <strong style="color:#a1a1aa">+3 pts</strong> — Preload directive included
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#8b5cf6">📋</span> Security Headers</h3>
+          <span class="pts" style="color:#f0b429">15 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">5 pts</strong> — X-Frame-Options: DENY or SAMEORIGIN<br>
+          <strong style="color:#a1a1aa">5 pts</strong> — X-Content-Type-Options: nosniff<br>
+          <strong style="color:#a1a1aa">5 pts</strong> — Content-Security-Policy header present
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#ef4444">📧</span> Email Security</h3>
+          <span class="pts" style="color:#f0b429">20 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">12 pts</strong> — DMARC policy = reject<br>
+          <strong style="color:#a1a1aa">8 pts</strong> — DMARC policy = quarantine<br>
+          <strong style="color:#a1a1aa">4 pts</strong> — DMARC policy present (any)<br>
+          <strong style="color:#a1a1aa">+4 pts</strong> — SPF record present<br>
+          <strong style="color:#a1a1aa">+4 pts</strong> — MX record present
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#06b6d4">🌐</span> DNSSEC</h3>
+          <span class="pts" style="color:#f0b429">10 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">10 pts</strong> — DNSKEY record present in DNS
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#f97316">⚠️</span> Exposure Checks</h3>
+          <span class="pts" style="color:#f0b429">20 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">5 pts each</strong> — No exposure of:<br>
+          &nbsp;&nbsp;• /.git/config (source code leak)<br>
+          &nbsp;&nbsp;• /.env (credentials leak)<br>
+          &nbsp;&nbsp;• /phpinfo (server config leak)<br>
+          &nbsp;&nbsp;• cPanel on standard ports
+        </p>
+      </div>
+
+      <div class="rubric-card">
+        <div class="flex justify-between items-start mb-1">
+          <h3><span style="color:#14b8a6">📡</span> HTTP Reachability</h3>
+          <span class="pts" style="color:#f0b429">10 pts</span>
+        </div>
+        <p style="color:#71717a;font-size:13px">
+          <strong style="color:#a1a1aa">5 pts</strong> — Returns 200, 301, or 302 status<br>
+          <strong style="color:#a1a1aa">5 pts</strong> — Returns non-error status (not 0, 404, 406)
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Grade Boundaries -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2" style="color:#e8e6e3">
+      <span style="color:#22c55e">★</span> Grade Boundaries
+    </h2>
+    <div style="background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden">
+      <div class="grade-row">
+        <span class="grade-letter" style="color:#22c55e">A</span>
+        <span class="grade-range" style="color:#22c55e">80 – 100</span>
+        <span class="grade-desc">Excellent — bank-grade security posture. Minimal attack surface.</span>
+      </div>
+      <div class="grade-row">
+        <span class="grade-letter" style="color:#3b82f6">B</span>
+        <span class="grade-range" style="color:#3b82f6">60 – 79</span>
+        <span class="grade-desc">Good — minor gaps. Most security controls in place.</span>
+      </div>
+      <div class="grade-row">
+        <span class="grade-letter" style="color:#f59e0b">C</span>
+        <span class="grade-range" style="color:#f59e0b">40 – 59</span>
+        <span class="grade-desc">Fair — several gaps present. Significant improvement needed.</span>
+      </div>
+      <div class="grade-row">
+        <span class="grade-letter" style="color:#f97316">D</span>
+        <span class="grade-range" style="color:#f97316">20 – 39</span>
+        <span class="grade-desc">Poor — critical gaps. High risk of compromise.</span>
+      </div>
+      <div class="grade-row">
+        <span class="grade-letter" style="color:#ef4444">F</span>
+        <span class="grade-range" style="color:#ef4444">0 – 19</span>
+        <span class="grade-desc">Failing — fundamentally insecure. Immediate action required.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Limitations -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2" style="color:#e8e6e3">
+      <span style="color:#f97316">⚠</span> Limitations
+    </h2>
+    <div style="background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:4px 16px">
+      <div class="lim-item">
+        <span class="lim-icon" style="color:#f97316">◆</span>
+        <span style="color:#a1a1aa;font-size:13px"><strong>Single vantage point:</strong> All scans originate from one AWS region. Results may differ from other geographic perspectives or internal network positions.</span>
+      </div>
+      <div class="lim-item">
+        <span class="lim-icon" style="color:#f97316">◆</span>
+        <span style="color:#a1a1aa;font-size:13px"><strong>DNS variability:</strong> DNS checks reflect the resolver configuration at scan time. Banks using split-horizon or geo-aware DNS may show different results internally.</span>
+      </div>
+      <div class="lim-item">
+        <span class="lim-icon" style="color:#f97316">◆</span>
+        <span style="color:#a1a1aa;font-size:13px"><strong>No authenticated scans:</strong> We do not log in, submit forms, or interact with applications. Login portals, internal APIs, and authenticated areas are not tested.</span>
+      </div>
+      <div class="lim-item">
+        <span class="lim-icon" style="color:#f97316">◆</span>
+        <span style="color:#a1a1aa;font-size:13px"><strong>Static analysis only:</strong> No dynamic testing (XSS, SQLi, CSRF, path traversal). A high score does not mean the application is secure — only that basic transport and config hygiene is in place.</span>
+      </div>
+      <div class="lim-item">
+        <span class="lim-icon" style="color:#f97316">◆</span>
+        <span style="color:#a1a1aa;font-size:13px"><strong>Not a substitute for professional audit:</strong> This is a public OSINT transparency tool, not a penetration test or security audit. Banks should engage qualified professionals for comprehensive assessments.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top:1px solid #27272a;padding-top:20px;margin-top:32px;text-align:center;color:#52525b;font-size:12px">
+    <p style="margin-bottom:8px">
+      <a href="https://github.com/CCAgentOrg/bankin-scorecard" style="color:#f0b429;text-decoration:underline">GitHub</a>
+      <span style="margin:0 12px">·</span>
+      <a href="../" style="color:#f0b429;text-decoration:underline">Dashboard</a>
+    </p>
+    <p>Built by <a href="https://cashlessconsumer.zo.space" style="color:#a1a1aa;text-decoration:underline">CashlessConsumer</a> — independent OSINT-based security assessment.</p>
+    <p class="mt-1">Not affiliated with RBI, IDRBT, NIXI, or any financial institution. Data from public OSINT sources.</p>
+  </footer>
+
 </main>
 </body>
 </html>
