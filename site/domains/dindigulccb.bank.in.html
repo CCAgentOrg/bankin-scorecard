@@ -14,7 +14,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 .cat-card{background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px}
 .cat-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cat-hdr h3{font-size:14px;font-weight:600;color:#e8e6e3}
-.cat-score{font-size:13px;font-family:monospace;color:#f59e0b}
+.cat-score{font-size:13px;font-family:monospace;color:#f97316}
 .cat-bar{width:100%;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:12px}
 .cat-bar-fill{height:100%;border-radius:3px;transition:width .3s}
 .ev-list{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#89847a}
@@ -43,13 +43,13 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 </nav>
 <main class="max-w-4xl mx-auto px-4 py-8">
   <div class="flex items-start gap-4 mb-8">
-    <div class="grade-badge" style="background:#f59e0b22;color:#f59e0b;border-color:#f59e0b44">C</div>
+    <div class="grade-badge" style="background:#f9731622;color:#f97316;border-color:#f9731644">D</div>
     <div>
       <h2 class="text-2xl font-bold">dindigulccb.bank.in</h2>
       <p class="text-lg" style="color:#a1a1aa">DINDIGUL CENTRAL COOPERATIVE BANK LTD</p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">DCCB</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f59e0b">Score: 44/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 30/100</span>
       </div>
     </div>
   </div>
@@ -57,23 +57,23 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
     
         <div class="cat-card">
-            <div class="cat-hdr"><h3>HTTPS / TLS</h3><span class="cat-score">15/15</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>HTTPS enabled</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>HTTPS / TLS</h3><span class="cat-score">0/15</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:0%;background:rgba(255,255,255,0.12)"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>HTTPS enabled</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>HTTPS / TLS</strong><br>
         Encrypts all traffic between the user&#x27;s browser and the bank&#x27;s server using TLS certificates.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without HTTPS, all data — passwords, transactions, session tokens — travels in plaintext. Attackers on the same network can intercept everything via man-in-the-middle attacks. RBI mandates HTTPS for all bank websites.
       </span>
-    </span><span class="ev-pts">10/15</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>TLSv1.3</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">0/15</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>No TLS</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>TLS Version</strong><br>
-        TLS 1.3 is the latest secure protocol version.<br>
-        <span style="color:#da7756;font-weight:600">Risk: </span>Old TLS versions have exploitable flaws like POODLE and BEAST. Banking APIs often require TLS 1.2 minimum.
+        The TLS protocol version determines the encryption strength of the connection.<br>
+        <span style="color:#da7756;font-weight:600">Risk: </span>Old TLS versions have exploitable flaws. Attackers can force downgrade and decrypt traffic.
       </span>
-    </span><span class="ev-pts">5/15</span></div></div>
+    </span><span class="ev-pts">0/15</span></div></div>
             </div>
         <div class="cat-card">
             <div class="cat-hdr"><h3>HSTS</h3><span class="cat-score">0/10</span></div>
@@ -121,23 +121,23 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/15</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Email Security</h3><span class="cat-score">4/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:20%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>DMARC: not set</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>Email Security</h3><span class="cat-score">12/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:60%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>DMARC: none</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>DMARC</strong><br>
         Tells receiving mail servers what to do with unauthenticated emails from this domain.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without DMARC=reject, anyone can spoof the bank&#x27;s domain and send phishing emails. This is the #1 vector for bank fraud.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>SPF record missing</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">4/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>SPF record present</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>SPF</strong><br>
         Lists which mail servers are authorized to send email for the domain.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without SPF, attackers can send from any server pretending to be the bank. SPF alone is not enough but is critical for email auth.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>MX record present</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">4/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>MX record present</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>MX Record</strong><br>
@@ -159,8 +159,8 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/10</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">10/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:50%;background:#f0b429"></div></div>
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:75%;background:#f0b429"></div></div>
             <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
@@ -175,33 +175,33 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
         The /.env file is publicly accessible, leaking environment variables with secrets.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Direct credential leak — database passwords, API keys, encryption keys. Often enough for full system compromise within minutes.
       </span>
-    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>cPanel DETECTED</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Admin Exposure</strong><br>
         The hosting control panel (cPanel) or phpinfo page is publicly accessible.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Public admin panels are targets for brute-force. A cPanel breach gives attackers full hosting account control. phpinfo leaks server config.
       </span>
-    </span><span class="ev-pts">0/20</span></div></div>
+    </span><span class="ev-pts">5/20</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">10/10</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>HTTP Status: 200</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">0/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:0%;background:rgba(255,255,255,0.12)"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>HTTP Status: 0</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>HTTP Status</strong><br>
         The HTTP response code from the bank&#x27;s web server.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Non-responsive or error-status domains indicate misconfigured or abandoned sites that can&#x27;t serve customers or be monitored.
       </span>
-    </span><span class="ev-pts">5/10</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">0/10</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Reachability</strong><br>
         Whether the domain responds with a meaningful status code vs timeout/error.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Domains that time out or error may indicate server misconfiguration, DDoS vulnerability, or abandoned infrastructure.
       </span>
-    </span><span class="ev-pts">5/10</span></div></div>
+    </span><span class="ev-pts">0/10</span></div></div>
             </div>
   </div>
   <details class="mb-8">
@@ -212,10 +212,10 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;bank_name&quot;: &quot;DINDIGUL CENTRAL COOPERATIVE BANK LTD&quot;,
   &quot;bank_type&quot;: &quot;DCCB&quot;,
   &quot;dicgc_category&quot;: &quot;DCCBs&quot;,
-  &quot;http_status&quot;: 200,
-  &quot;https&quot;: true,
-  &quot;cert_valid&quot;: true,
-  &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
+  &quot;http_status&quot;: 0,
+  &quot;https&quot;: false,
+  &quot;cert_valid&quot;: false,
+  &quot;tls_version&quot;: &quot;&quot;,
   &quot;hsts&quot;: false,
   &quot;hsts_max_age&quot;: 0,
   &quot;hsts_subdomains&quot;: false,
@@ -223,31 +223,31 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
-  &quot;server_header&quot;: &quot;apache&quot;,
-  &quot;title&quot;: &quot;Dindigul Central Co-operative Bank Ltd - Home&quot;,
+  &quot;server_header&quot;: &quot;&quot;,
+  &quot;title&quot;: &quot;&quot;,
   &quot;dnssec&quot;: false,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_policy&quot;: &quot;none&quot;,
   &quot;dmarc_subdomain&quot;: &quot;&quot;,
-  &quot;dmarc_pct&quot;: -1,
-  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: 100,
+  &quot;spf_record&quot;: &quot;v=spf1 +a +mx +ip4:107.178.101.90 +ip4:104.161.47.198 +ip4:104.161.34.2 +include:relay.mailchannels.net ~all&quot;,
   &quot;spf_hardfail&quot;: false,
   &quot;has_mx&quot;: true,
   &quot;git_exposed&quot;: false,
   &quot;env_exposed&quot;: false,
   &quot;phpinfo_exposed&quot;: false,
-  &quot;cpanel_detected&quot;: true,
+  &quot;cpanel_detected&quot;: false,
   &quot;admin_panel_detected&quot;: false,
-  &quot;ip_address&quot;: &quot;104.161.47.198&quot;,
-  &quot;cloud_provider&quot;: &quot;Cloudflare&quot;,
-  &quot;score&quot;: 44,
-  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:30:50.787884&quot;
+  &quot;ip_address&quot;: &quot;&quot;,
+  &quot;cloud_provider&quot;: &quot;&quot;,
+  &quot;score&quot;: 30,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:58:05.468373&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
-    <p>IP: 104.161.47.198 | Cloud: Cloudflare</p>
+    <p>IP: N/A | Cloud: Unknown</p>
     
-    <p>Last scanned: 2026-06-16 10:30:50.787884</p>
+    <p>Last scanned: 2026-06-16 10:58:05.468373</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

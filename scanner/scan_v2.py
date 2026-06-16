@@ -164,7 +164,7 @@ def dns_scan(domain):
     try:
         ans = dns.resolver.resolve(f"_dmarc.{domain}", "TXT", lifetime=3)
         for a in ans:
-            txt = "".join(a.strings)
+            txt = b"".join(a.strings).decode("utf-8", errors="replace")
             if txt.startswith("v=DMARC1"):
                 p = re.search(r'p=(\w+)', txt)
                 r["dmarc_policy"] = p.group(1) if p else ""
@@ -177,7 +177,7 @@ def dns_scan(domain):
     try:
         ans = dns.resolver.resolve(domain, "TXT", lifetime=3)
         for a in ans:
-            txt = "".join(a.strings)
+            txt = b"".join(a.strings).decode("utf-8", errors="replace")
             if txt.startswith("v=spf1"):
                 r["spf_record"] = txt[:200]
                 r["spf_hardfail"] = " -all" in txt or txt.strip().endswith("-all")

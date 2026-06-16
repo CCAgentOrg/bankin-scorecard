@@ -49,7 +49,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
       <p class="text-lg" style="color:#a1a1aa">NAGARIK SAMABAY BANK LTD</p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">O-UCB</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f59e0b">Score: 44/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f59e0b">Score: 50/100</span>
       </div>
     </div>
   </div>
@@ -121,23 +121,23 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/15</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Email Security</h3><span class="cat-score">4/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:20%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>DMARC: not set</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>Email Security</h3><span class="cat-score">12/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:60%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>DMARC: none</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>DMARC</strong><br>
         Tells receiving mail servers what to do with unauthenticated emails from this domain.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without DMARC=reject, anyone can spoof the bank&#x27;s domain and send phishing emails. This is the #1 vector for bank fraud.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>SPF record missing</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">4/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>SPF record present</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>SPF</strong><br>
         Lists which mail servers are authorized to send email for the domain.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without SPF, attackers can send from any server pretending to be the bank. SPF alone is not enough but is critical for email auth.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>MX record present</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">4/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>MX record present</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>MX Record</strong><br>
@@ -226,10 +226,10 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;server_header&quot;: &quot;apache&quot;,
   &quot;title&quot;: &quot;Nagarik Bank - Nagarik Samabay Bank Ltd&quot;,
   &quot;dnssec&quot;: false,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_policy&quot;: &quot;none&quot;,
   &quot;dmarc_subdomain&quot;: &quot;&quot;,
-  &quot;dmarc_pct&quot;: -1,
-  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: 100,
+  &quot;spf_record&quot;: &quot;v=spf1 ip4:66.116.241.121 +a +mx +ip4:216.10.250.10 ~all&quot;,
   &quot;spf_hardfail&quot;: false,
   &quot;has_mx&quot;: true,
   &quot;git_exposed&quot;: false,
@@ -239,15 +239,15 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;admin_panel_detected&quot;: true,
   &quot;ip_address&quot;: &quot;66.116.241.121&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 44,
-  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:32:38.095537&quot;
+  &quot;score&quot;: 50,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:58:58.123761&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
     <p>IP: 66.116.241.121 | Cloud: Unknown</p>
     
-    <p>Last scanned: 2026-06-16 10:32:38.095537</p>
+    <p>Last scanned: 2026-06-16 10:58:58.123761</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.
