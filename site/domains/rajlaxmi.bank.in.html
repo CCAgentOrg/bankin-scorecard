@@ -159,8 +159,8 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">10/10</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:75%;background:#f0b429"></div></div>
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">10/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:50%;background:#f0b429"></div></div>
             <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
@@ -175,26 +175,26 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
         The /.env file is publicly accessible, leaking environment variables with secrets.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Direct credential leak — database passwords, API keys, encryption keys. Often enough for full system compromise within minutes.
       </span>
-    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>cPanel DETECTED</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Admin Exposure</strong><br>
         The hosting control panel (cPanel) or phpinfo page is publicly accessible.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Public admin panels are targets for brute-force. A cPanel breach gives attackers full hosting account control. phpinfo leaks server config.
       </span>
-    </span><span class="ev-pts">5/20</span></div></div>
+    </span><span class="ev-pts">0/20</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">5/10</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:50%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>HTTP Status: 500</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>HTTP Status: 200</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>HTTP Status</strong><br>
         The HTTP response code from the bank&#x27;s web server.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Non-responsive or error-status domains indicate misconfigured or abandoned sites that can&#x27;t serve customers or be monitored.
       </span>
-    </span><span class="ev-pts">0/10</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/10</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Reachability</strong><br>
@@ -212,35 +212,42 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;bank_name&quot;: &quot;RAJLAXMI URBAN CO OP BANK LTD&quot;,
   &quot;bank_type&quot;: &quot;O-UCB&quot;,
   &quot;dicgc_category&quot;: &quot;UCBs&quot;,
-  &quot;http_status&quot;: 500,
+  &quot;http_status&quot;: 200,
   &quot;https&quot;: true,
+  &quot;cert_valid&quot;: true,
   &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
   &quot;hsts&quot;: false,
+  &quot;hsts_max_age&quot;: 0,
+  &quot;hsts_subdomains&quot;: false,
   &quot;hsts_preload&quot;: false,
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
-  &quot;spf_record&quot;: &quot;&quot;,
-  &quot;has_mx&quot;: true,
+  &quot;server_header&quot;: &quot;apache&quot;,
+  &quot;title&quot;: &quot;Welcome to RajLaxmi Bank Nashik&quot;,
   &quot;dnssec&quot;: true,
+  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
+  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
+  &quot;has_mx&quot;: true,
   &quot;git_exposed&quot;: false,
   &quot;env_exposed&quot;: false,
-  &quot;cpanel_detected&quot;: false,
-  &quot;admin_panel_detected&quot;: false,
-  &quot;server_header&quot;: &quot;apache&quot;,
-  &quot;page_title&quot;: &quot;Database Error&quot;,
+  &quot;phpinfo_exposed&quot;: false,
+  &quot;cpanel_detected&quot;: true,
+  &quot;admin_panel_detected&quot;: true,
   &quot;ip_address&quot;: &quot;162.241.191.17&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
   &quot;score&quot;: 54,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:38:04.045707&quot;
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:33:00.523373&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
     <p>IP: 162.241.191.17 | Cloud: Unknown</p>
-    <p>Title: Database Error</p>
-    <p>Last scanned: 2026-06-15 05:38:04.045707</p>
+    
+    <p>Last scanned: 2026-06-16 10:33:00.523373</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

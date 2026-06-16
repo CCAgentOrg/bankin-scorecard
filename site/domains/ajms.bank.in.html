@@ -49,7 +49,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
       
       <div class="flex flex-wrap gap-2 mt-2">
         
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 24/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 34/100</span>
       </div>
     </div>
   </div>
@@ -147,16 +147,16 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">4/20</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>DNSSEC</h3><span class="cat-score">0/10</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:0%;background:rgba(255,255,255,0.12)"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>DNSSEC (DNSKEY record)</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>DNSSEC</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>DNSSEC (DNSKEY record)</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>DNSSEC</strong><br>
         Cryptographically signs DNS records to prevent spoofing and cache poisoning.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without DNSSEC, attackers can poison DNS and redirect users to fake bank sites. The user types the correct URL but lands on the attacker&#x27;s server.
       </span>
-    </span><span class="ev-pts">0/10</span></div></div>
+    </span><span class="ev-pts">10/10</span></div></div>
             </div>
         <div class="cat-card">
             <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
@@ -214,33 +214,40 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;dicgc_category&quot;: &quot;&quot;,
   &quot;http_status&quot;: 0,
   &quot;https&quot;: false,
+  &quot;cert_valid&quot;: false,
   &quot;tls_version&quot;: &quot;&quot;,
   &quot;hsts&quot;: false,
+  &quot;hsts_max_age&quot;: 0,
+  &quot;hsts_subdomains&quot;: false,
   &quot;hsts_preload&quot;: false,
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
+  &quot;server_header&quot;: &quot;&quot;,
+  &quot;title&quot;: &quot;&quot;,
+  &quot;dnssec&quot;: true,
   &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
   &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
   &quot;has_mx&quot;: true,
-  &quot;dnssec&quot;: false,
   &quot;git_exposed&quot;: false,
   &quot;env_exposed&quot;: false,
+  &quot;phpinfo_exposed&quot;: false,
   &quot;cpanel_detected&quot;: false,
   &quot;admin_panel_detected&quot;: false,
-  &quot;server_header&quot;: &quot;&quot;,
-  &quot;page_title&quot;: &quot;&quot;,
   &quot;ip_address&quot;: &quot;&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 24,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:35:52.042753&quot;
+  &quot;score&quot;: 34,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:30:48.655824&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
     <p>IP: N/A | Cloud: Unknown</p>
     
-    <p>Last scanned: 2026-06-15 05:35:52.042753</p>
+    <p>Last scanned: 2026-06-16 10:30:48.655824</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

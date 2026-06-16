@@ -49,7 +49,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
       <p class="text-lg" style="color:#a1a1aa">SHREE KADI NAGARIK SAHAKARI BANK LTD</p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">O-UCB</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#3b82f6">Score: 74/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#3b82f6">Score: 64/100</span>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
         <div class="cat-card">
             <div class="cat-hdr"><h3>Security Headers</h3><span class="cat-score">15/15</span></div>
             <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>X-Frame-Options: deny</span><span class="help-wrap" tabindex="0">
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>X-Frame-Options: DENY</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>X-Frame-Options</strong><br>
@@ -159,23 +159,23 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/10</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:75%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">5/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:25%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>/.git/config EXPOSED</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Git Exposure</strong><br>
         The /.git/config path is publicly accessible, leaking the entire source repository.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Complete source code leak — database credentials, API keys, internal architecture. Attackers find zero-days by reading the code.
       </span>
-    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>/.env EXPOSED</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>.env Exposure</strong><br>
         The /.env file is publicly accessible, leaking environment variables with secrets.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Direct credential leak — database passwords, API keys, encryption keys. Often enough for full system compromise within minutes.
       </span>
-    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Admin Exposure</strong><br>
@@ -214,33 +214,40 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;dicgc_category&quot;: &quot;UCBs&quot;,
   &quot;http_status&quot;: 200,
   &quot;https&quot;: true,
+  &quot;cert_valid&quot;: true,
   &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
   &quot;hsts&quot;: true,
+  &quot;hsts_max_age&quot;: 63072000,
+  &quot;hsts_subdomains&quot;: true,
   &quot;hsts_preload&quot;: true,
-  &quot;x_frame_options&quot;: &quot;deny&quot;,
+  &quot;x_frame_options&quot;: &quot;DENY&quot;,
   &quot;x_content_type&quot;: &quot;nosniff&quot;,
   &quot;content_security&quot;: true,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
-  &quot;spf_record&quot;: &quot;&quot;,
-  &quot;has_mx&quot;: true,
+  &quot;server_header&quot;: &quot;nginx&quot;,
+  &quot;title&quot;: &quot;Shree Kadi Nagarik Sahakari Bank Ltd - SKNSBL&quot;,
   &quot;dnssec&quot;: false,
-  &quot;git_exposed&quot;: false,
-  &quot;env_exposed&quot;: false,
+  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
+  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
+  &quot;has_mx&quot;: true,
+  &quot;git_exposed&quot;: true,
+  &quot;env_exposed&quot;: true,
+  &quot;phpinfo_exposed&quot;: false,
   &quot;cpanel_detected&quot;: false,
   &quot;admin_panel_detected&quot;: true,
-  &quot;server_header&quot;: &quot;nginx&quot;,
-  &quot;page_title&quot;: &quot;Shree Kadi Nagarik Sahakari Bank Ltd - SKNSBL&quot;,
-  &quot;ip_address&quot;: &quot;148.113.24.222&quot;,
+  &quot;ip_address&quot;: &quot;148.113.24.220&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 74,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:36:39.938983&quot;
+  &quot;score&quot;: 64,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:31:52.013376&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
-    <p>IP: 148.113.24.222 | Cloud: Unknown</p>
-    <p>Title: Shree Kadi Nagarik Sahakari Bank Ltd - SKNSBL</p>
-    <p>Last scanned: 2026-06-15 05:36:39.938983</p>
+    <p>IP: 148.113.24.220 | Cloud: Unknown</p>
+    
+    <p>Last scanned: 2026-06-16 10:31:52.013376</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

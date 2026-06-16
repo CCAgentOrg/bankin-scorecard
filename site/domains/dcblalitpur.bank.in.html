@@ -49,7 +49,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
       <p class="text-lg" style="color:#a1a1aa">ZILA SAHAKARI BANK LTD LALITPUR</p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">Private</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 24/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 29/100</span>
       </div>
     </div>
   </div>
@@ -159,30 +159,30 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/10</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">5/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:25%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>/.git/config EXPOSED</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:75%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Git Exposure</strong><br>
         The /.git/config path is publicly accessible, leaking the entire source repository.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Complete source code leak — database credentials, API keys, internal architecture. Attackers find zero-days by reading the code.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>.env Exposure</strong><br>
         The /.env file is publicly accessible, leaking environment variables with secrets.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Direct credential leak — database passwords, API keys, encryption keys. Often enough for full system compromise within minutes.
       </span>
-    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>cPanel DETECTED</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>cPanel not detected</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Admin Exposure</strong><br>
         The hosting control panel (cPanel) or phpinfo page is publicly accessible.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Public admin panels are targets for brute-force. A cPanel breach gives attackers full hosting account control. phpinfo leaks server config.
       </span>
-    </span><span class="ev-pts">0/20</span></div></div>
+    </span><span class="ev-pts">5/20</span></div></div>
             </div>
         <div class="cat-card">
             <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">0/10</span></div>
@@ -214,33 +214,40 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;dicgc_category&quot;: &quot;Private Sector Banks&quot;,
   &quot;http_status&quot;: 404,
   &quot;https&quot;: true,
+  &quot;cert_valid&quot;: false,
   &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
   &quot;hsts&quot;: false,
+  &quot;hsts_max_age&quot;: 0,
+  &quot;hsts_subdomains&quot;: false,
   &quot;hsts_preload&quot;: false,
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
-  &quot;spf_record&quot;: &quot;&quot;,
-  &quot;has_mx&quot;: true,
-  &quot;dnssec&quot;: false,
-  &quot;git_exposed&quot;: true,
-  &quot;env_exposed&quot;: false,
-  &quot;cpanel_detected&quot;: true,
-  &quot;admin_panel_detected&quot;: true,
   &quot;server_header&quot;: &quot;apache&quot;,
-  &quot;page_title&quot;: &quot;&quot;,
+  &quot;title&quot;: &quot;&quot;,
+  &quot;dnssec&quot;: false,
+  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
+  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
+  &quot;has_mx&quot;: true,
+  &quot;git_exposed&quot;: false,
+  &quot;env_exposed&quot;: false,
+  &quot;phpinfo_exposed&quot;: true,
+  &quot;cpanel_detected&quot;: false,
+  &quot;admin_panel_detected&quot;: false,
   &quot;ip_address&quot;: &quot;216.10.253.176&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 24,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:35:45.725531&quot;
+  &quot;score&quot;: 29,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:31:01.14753&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
     <p>IP: 216.10.253.176 | Cloud: Unknown</p>
     
-    <p>Last scanned: 2026-06-15 05:35:45.725531</p>
+    <p>Last scanned: 2026-06-16 10:31:01.14753</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

@@ -14,7 +14,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 .cat-card{background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px}
 .cat-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cat-hdr h3{font-size:14px;font-weight:600;color:#e8e6e3}
-.cat-score{font-size:13px;font-family:monospace;color:#f97316}
+.cat-score{font-size:13px;font-family:monospace;color:#f59e0b}
 .cat-bar{width:100%;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:12px}
 .cat-bar-fill{height:100%;border-radius:3px;transition:width .3s}
 .ev-list{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#89847a}
@@ -43,13 +43,13 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 </nav>
 <main class="max-w-4xl mx-auto px-4 py-8">
   <div class="flex items-start gap-4 mb-8">
-    <div class="grade-badge" style="background:#f9731622;color:#f97316;border-color:#f9731644">D</div>
+    <div class="grade-badge" style="background:#f59e0b22;color:#f59e0b;border-color:#f59e0b44">C</div>
     <div>
       <h2 class="text-2xl font-bold">dcbvaranasi.bank.in</h2>
       <p class="text-lg" style="color:#a1a1aa">ZILA SAHAKARI BANK LIMITED VARANASI</p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">Private</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f97316">Score: 20/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f59e0b">Score: 40/100</span>
       </div>
     </div>
   </div>
@@ -159,16 +159,16 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/10</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">5/20</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:25%;background:#f0b429"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>/.git/config EXPOSED</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">10/20</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:50%;background:#f0b429"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>/.git/config not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Git Exposure</strong><br>
         The /.git/config path is publicly accessible, leaking the entire source repository.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Complete source code leak — database credentials, API keys, internal architecture. Attackers find zero-days by reading the code.
       </span>
-    </span><span class="ev-pts">0/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/20</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>/.env not exposed</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>.env Exposure</strong><br>
@@ -185,23 +185,23 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">0/20</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">0/10</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:0%;background:rgba(255,255,255,0.12)"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>HTTP Status: 404</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>HTTP Reachability</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>HTTP Status: 200</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>HTTP Status</strong><br>
         The HTTP response code from the bank&#x27;s web server.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Non-responsive or error-status domains indicate misconfigured or abandoned sites that can&#x27;t serve customers or be monitored.
       </span>
-    </span><span class="ev-pts">0/10</span></div><div class="ev-item"><span class="ev-icon">✗</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
+    </span><span class="ev-pts">5/10</span></div><div class="ev-item"><span class="ev-icon">✓</span><span>Non-error response</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>Reachability</strong><br>
         Whether the domain responds with a meaningful status code vs timeout/error.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Domains that time out or error may indicate server misconfiguration, DDoS vulnerability, or abandoned infrastructure.
       </span>
-    </span><span class="ev-pts">0/10</span></div></div>
+    </span><span class="ev-pts">5/10</span></div></div>
             </div>
   </div>
   <details class="mb-8">
@@ -212,35 +212,42 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;bank_name&quot;: &quot;ZILA SAHAKARI BANK LIMITED VARANASI&quot;,
   &quot;bank_type&quot;: &quot;Private&quot;,
   &quot;dicgc_category&quot;: &quot;Private Sector Banks&quot;,
-  &quot;http_status&quot;: 404,
+  &quot;http_status&quot;: 200,
   &quot;https&quot;: true,
+  &quot;cert_valid&quot;: true,
   &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
   &quot;hsts&quot;: false,
+  &quot;hsts_max_age&quot;: 0,
+  &quot;hsts_subdomains&quot;: false,
   &quot;hsts_preload&quot;: false,
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
-  &quot;dmarc_policy&quot;: &quot;&quot;,
-  &quot;spf_record&quot;: &quot;&quot;,
-  &quot;has_mx&quot;: false,
+  &quot;server_header&quot;: &quot;apache&quot;,
+  &quot;title&quot;: &quot;Zila Sahakari Bank Ltd. Varanasi&quot;,
   &quot;dnssec&quot;: false,
-  &quot;git_exposed&quot;: true,
+  &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
+  &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
+  &quot;has_mx&quot;: false,
+  &quot;git_exposed&quot;: false,
   &quot;env_exposed&quot;: false,
+  &quot;phpinfo_exposed&quot;: false,
   &quot;cpanel_detected&quot;: true,
   &quot;admin_panel_detected&quot;: true,
-  &quot;server_header&quot;: &quot;apache&quot;,
-  &quot;page_title&quot;: &quot;&quot;,
-  &quot;ip_address&quot;: &quot;162.241.27.12&quot;,
+  &quot;ip_address&quot;: &quot;103.50.162.145&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 20,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:35:37.839991&quot;
+  &quot;score&quot;: 40,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:30:49.077522&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
-    <p>IP: 162.241.27.12 | Cloud: Unknown</p>
+    <p>IP: 103.50.162.145 | Cloud: Unknown</p>
     
-    <p>Last scanned: 2026-06-15 05:35:37.839991</p>
+    <p>Last scanned: 2026-06-16 10:30:49.077522</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.

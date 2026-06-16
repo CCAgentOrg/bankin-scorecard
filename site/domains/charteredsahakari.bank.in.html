@@ -14,7 +14,7 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 .cat-card{background:rgba(18,18,26,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px}
 .cat-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cat-hdr h3{font-size:14px;font-weight:600;color:#e8e6e3}
-.cat-score{font-size:13px;font-family:monospace;color:#f59e0b}
+.cat-score{font-size:13px;font-family:monospace;color:#3b82f6}
 .cat-bar{width:100%;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:12px}
 .cat-bar-fill{height:100%;border-radius:3px;transition:width .3s}
 .ev-list{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#89847a}
@@ -43,13 +43,13 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
 </nav>
 <main class="max-w-4xl mx-auto px-4 py-8">
   <div class="flex items-start gap-4 mb-8">
-    <div class="grade-badge" style="background:#f59e0b22;color:#f59e0b;border-color:#f59e0b44">C</div>
+    <div class="grade-badge" style="background:#3b82f622;color:#3b82f6;border-color:#3b82f644">B</div>
     <div>
       <h2 class="text-2xl font-bold">charteredsahakari.bank.in</h2>
       <p class="text-lg" style="color:#a1a1aa">CHARTERED SAHAKARI BANK </p>
       <div class="flex flex-wrap gap-2 mt-2">
         <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.06);color:#89847a">O-UCB</span>
-        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#f59e0b">Score: 56/100</span>
+        <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(255,255,255,0.06);color:#3b82f6">Score: 62/100</span>
       </div>
     </div>
   </div>
@@ -147,16 +147,16 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
     </span><span class="ev-pts">4/20</span></div></div>
             </div>
         <div class="cat-card">
-            <div class="cat-hdr"><h3>DNSSEC</h3><span class="cat-score">0/10</span></div>
-            <div class="cat-bar"><div class="cat-bar-fill" style="width:0%;background:rgba(255,255,255,0.12)"></div></div>
-            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✗</span><span>DNSSEC (DNSKEY record)</span><span class="help-wrap" tabindex="0">
+            <div class="cat-hdr"><h3>DNSSEC</h3><span class="cat-score">10/10</span></div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width:100%;background:#22c55e"></div></div>
+            <div class="ev-list"><div class="ev-item"><span class="ev-icon">✓</span><span>DNSSEC (DNSKEY record)</span><span class="help-wrap" tabindex="0">
       <span class="help-icon">ⓘ</span>
       <span class="help-box">
         <strong>DNSSEC</strong><br>
         Cryptographically signs DNS records to prevent spoofing and cache poisoning.<br>
         <span style="color:#da7756;font-weight:600">Risk: </span>Without DNSSEC, attackers can poison DNS and redirect users to fake bank sites. The user types the correct URL but lands on the attacker&#x27;s server.
       </span>
-    </span><span class="ev-pts">0/10</span></div></div>
+    </span><span class="ev-pts">10/10</span></div></div>
             </div>
         <div class="cat-card">
             <div class="cat-hdr"><h3>Exposure Checks</h3><span class="cat-score">15/20</span></div>
@@ -214,33 +214,40 @@ nav .nav-links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   &quot;dicgc_category&quot;: &quot;UCBs&quot;,
   &quot;http_status&quot;: 200,
   &quot;https&quot;: true,
+  &quot;cert_valid&quot;: true,
   &quot;tls_version&quot;: &quot;TLSv1.3&quot;,
   &quot;hsts&quot;: true,
+  &quot;hsts_max_age&quot;: 31536000,
+  &quot;hsts_subdomains&quot;: false,
   &quot;hsts_preload&quot;: false,
   &quot;x_frame_options&quot;: &quot;&quot;,
   &quot;x_content_type&quot;: &quot;&quot;,
   &quot;content_security&quot;: false,
+  &quot;server_header&quot;: &quot;nginx&quot;,
+  &quot;title&quot;: &quot;Welcome to Chartered Shakari Bank Niyamitha&quot;,
+  &quot;dnssec&quot;: true,
   &quot;dmarc_policy&quot;: &quot;&quot;,
+  &quot;dmarc_subdomain&quot;: &quot;&quot;,
+  &quot;dmarc_pct&quot;: -1,
   &quot;spf_record&quot;: &quot;&quot;,
+  &quot;spf_hardfail&quot;: false,
   &quot;has_mx&quot;: true,
-  &quot;dnssec&quot;: false,
   &quot;git_exposed&quot;: false,
   &quot;env_exposed&quot;: false,
+  &quot;phpinfo_exposed&quot;: false,
   &quot;cpanel_detected&quot;: false,
   &quot;admin_panel_detected&quot;: false,
-  &quot;server_header&quot;: &quot;nginx&quot;,
-  &quot;page_title&quot;: &quot;Welcome to Chartered Shakari Bank Niyamitha&quot;,
   &quot;ip_address&quot;: &quot;72.61.237.181&quot;,
   &quot;cloud_provider&quot;: &quot;&quot;,
-  &quot;score&quot;: 56,
-  &quot;scan_timestamp&quot;: &quot;2026-06-15 05:35:27.888904&quot;
+  &quot;score&quot;: 62,
+  &quot;scan_timestamp&quot;: &quot;2026-06-16 10:30:26.623231&quot;
 }</pre>
     </div>
   </details>
   <div class="text-xs" style="color:#52525b;space-y:1">
     <p>IP: 72.61.237.181 | Cloud: Unknown</p>
-    <p>Title: Welcome to Chartered Shakari Bank Niyamitha</p>
-    <p>Last scanned: 2026-06-15 05:35:27.888904</p>
+    
+    <p>Last scanned: 2026-06-16 10:30:26.623231</p>
   </div>
   <div class="mt-8 text-center text-xs" style="color:#3f3f46;border-top:1px solid #27272a;padding-top:16px">
     Built by CashlessConsumer — independent OSINT-based security assessment.
